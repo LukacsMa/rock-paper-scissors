@@ -1,4 +1,9 @@
+ let userChoice;
+ let rpsArray = document.querySelectorAll(".pic");
 
+
+rpsArray.forEach(el => el.addEventListener("click", () => {
+  userChoice = el.id;
   const getComputerChoice = (computerInput) => {
     computerInput = Math.floor(Math.random() * 3);
     if (computerInput === 0) {
@@ -11,11 +16,6 @@
   }
 
   let computerChoice = getComputerChoice();
-
-  let userChoice;
-  let rpsArray = document.querySelectorAll(".pic");
-
-  console.log(rpsArray);
  
   const determineWinner = () => {
     if (userChoice === computerChoice) {
@@ -31,10 +31,7 @@
     document.querySelector("#result").innerHTML = `Your choice ${userChoice}, computer's choice: ${computerChoice} <br> ${determineWinner()}`;
 
   }
-
-  rpsArray.forEach(el => el.addEventListener("click", () => {
-    userChoice = el.id;
-    getComputerChoice();
-    determineWinner();
+  
     showResult();
+    
   }));
