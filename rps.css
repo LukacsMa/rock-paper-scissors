@@ -1,0 +1,16 @@
+body {
+  background-color: khaki;
+  font-size: 1.8em;
+  margin: 5%;
+  text-align: center;
+}
+
+.pictures {
+  width: 80vw;
+  margin: auto;
+}
+
+.pic {
+  width: 8rem;
+  margin: 1rem;
+}
