@@ -31,7 +31,8 @@ rpsArray.forEach(el => el.addEventListener("click", () => {
     document.querySelector("#result").innerHTML = `Your choice ${userChoice}, computer's choice: ${computerChoice} <br> ${determineWinner()}`;
 
   }
-  
+    getComputerChoice();
+    determineWinner();
     showResult();
     
   }));
